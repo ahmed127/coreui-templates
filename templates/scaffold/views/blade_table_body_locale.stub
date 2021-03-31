@@ -1,16 +1,16 @@
-<div class="table-responsive-sm">
-    <table class="table table-striped" id="$MODEL_NAME_PLURAL_CAMEL$-table">
-        <thead>
-            <tr>
-                $FIELD_HEADERS$
-                <th colspan="3">@lang('crud.action')</th>
-            </tr>
-        </thead>
-        <tbody>
+<!--begin: Datatable-->
+<table class="table table-separate table-head-custom table-checkable" id="kt_datatable1">
+    <thead>
+        <tr>
+            $FIELD_HEADERS$
+            <th>@lang('crud.action')</th>
+        </tr>
+    </thead>
+    <tbody>
         @foreach($$MODEL_NAME_PLURAL_CAMEL$ as $$MODEL_NAME_CAMEL$)
             <tr>
                 $FIELD_BODY$
-                <td>
+                <td nowrap>
                     {!! Form::open(['route' => ['$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.destroy', $$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$], 'method' => 'delete']) !!}
                     <div class='btn-group'>
                         <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.show', [$$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$]) }}" class='btn btn-ghost-success'><i class="fa fa-eye"></i></a>
@@ -21,6 +21,6 @@
                 </td>
             </tr>
         @endforeach
-        </tbody>
-    </table>
-</div>
+    </tbody>
+</table>
+<!--end: Datatable-->
