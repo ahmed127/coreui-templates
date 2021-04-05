@@ -16,6 +16,7 @@
                     <span class="d-block text-muted pt-2 font-size-sm">Descriptions</span>
                 </h3>
             </div>
+            @can('$MODEL_NAME_PLURAL_CAMEL$ create')
             <div class="card-toolbar">
                 <!--begin::Button-->
                 <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.create') }}" class="btn btn-primary font-weight-bolder">
@@ -30,10 +31,11 @@
                         </svg>
                         <!--end::Svg Icon-->
                     </span>
-                    Add New
+                    @lang('crud.add_new')
                 </a>
                 <!--end::Button-->
             </div>
+            @endcan
         </div>
 
         <div class="card-body">

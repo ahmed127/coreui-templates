@@ -32,7 +32,7 @@
                                         </svg>
                                         <!--end::Svg Icon-->
                                     </span>
-                                    Back
+                                    @lang('crud.back')
                                 </a>
                                 <!--end::Button-->
                             </div>
