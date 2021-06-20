@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('adminPanel.layouts.app')
 
 @section('breadcrumb')
 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
@@ -10,10 +10,10 @@
 @endsection
 @section('content')
     <div class="d-flex flex-column-fluid">
-		<!--begin::Container-->
-		<div class=" container ">
+        <!--begin::Container-->
+        <div class=" container ">
             @include('coreui-templates::common.errors')
-			<div class="row">
+            <div class="row">
                 <div class="col-lg-12">
                     <!--begin::Card-->
                     <div class="card card-custom gutter-b example example-compact">
@@ -30,6 +30,6 @@
                 </div>
             </div>
         </div>
-		<!--end::Container-->
+        <!--end::Container-->
     </div>
 @endsection
