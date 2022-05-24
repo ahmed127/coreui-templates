@@ -3,7 +3,7 @@
  {!! Form::label('$FIELD_NAME$', __('models/$MODEL_NAME_PLURAL_CAMEL$.fields.$FIELD_NAME$').':') !!}
     <label class="switch switch-label switch-pill switch-primary  ml-2">
         {!! Form::hidden('$FIELD_NAME$', 0) !!}
-        {!! Form::checkbox('$FIELD_NAME$', 1, null,  ['class' => 'switch-input']) !!}
+        {!! Form::checkbox('$FIELD_NAME$', 1, isset($$MODEL_NAME_CAMEL$)? $$MODEL_NAME_CAMEL$->$FIELD_NAME$ ??'' : '',  ['class' => 'switch-input']) !!}
         <span class="switch-slider" data-checked="On" data-unchecked="Off"></span>
     </label>
 </div>

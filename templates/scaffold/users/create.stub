@@ -19,9 +19,7 @@
                             </div>
                             <div class="card-body">
                                 {!! Form::open(['route' => 'users.store']) !!}
-
                                    @include('users.fields')
-
                                 {!! Form::close() !!}
                             </div>
                         </div>

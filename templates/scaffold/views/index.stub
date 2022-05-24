@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('adminPanel.layouts.app')
 
 @section('breadcrumb')
 <ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
-    <li class="breadcrumb-item">$MODEL_NAME_PLURAL$</li>
+    <li class="breadcrumb-item">@lang('models/$MODEL_NAME_PLURAL_CAMEL$.plural')</li>
 </ul>
 @endsection
 @section('content')
@@ -12,11 +12,11 @@
         <div class="card-header flex-wrap border-0 pt-6 pb-0">
             <div class="card-title">
                 <h3 class="card-label">
-                    $MODEL_NAME_PLURAL$
+                    @lang('models/$MODEL_NAME_PLURAL_CAMEL$.plural')
                     <span class="d-block text-muted pt-2 font-size-sm">Descriptions</span>
                 </h3>
             </div>
-            @can('$MODEL_NAME_PLURAL_CAMEL$ create') 
+            @can('$MODEL_NAME_PLURAL_CAMEL$ create')
             <div class="card-toolbar">
                 <!--begin::Button-->
                 <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.create') }}" class="btn btn-primary font-weight-bolder">
@@ -31,7 +31,7 @@
                         </svg>
                         <!--end::Svg Icon-->
                     </span>
-                    Add New
+                    @lang('crud.add_new')
                 </a>
                 <!--end::Button-->
             </div>
