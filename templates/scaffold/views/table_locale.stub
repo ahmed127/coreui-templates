@@ -43,13 +43,13 @@
     <table class="table table-bordered table-hover" id="kt_datatableasd">
         <thead>
             <tr>
-                $FIELD_HEADERS$
                 <th>
                     <label class="checkbox">
                         <input type="checkbox" class="check_inputs control-input" value=".inputs-permmission">
                         <span></span>
                     </label>
                 </th>
+                $FIELD_HEADERS$
                 <th>@lang('crud.action')</th>
             </tr>
         </thead>
